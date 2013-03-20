@@ -3,9 +3,6 @@
 
 (require "helpers.rkt")
 
-(define l '(1 2 3 4 5))
-(define l2 '(6 7 8 9 10))
-
 ;; Map
 (define (map proc l)
   (accumulate (lambda (x l) 
@@ -24,6 +21,9 @@
   (accumulate (lambda (x y) (+ y 1)) 0 list))
 
 ;; Tests
-(map square l)
-(append l l2)
-(length l)
+(define l1 '(1 2 3 4 5))
+(define l2 '(6 7 8 9 10))
+
+(map square l1)
+(append l1 l2)
+(length l1)
